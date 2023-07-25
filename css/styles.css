@@ -1,0 +1,18 @@
+:root {
+    --standard-padding: 20px 0 0 20px;}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+  }
+
+  .pokemonNameAndHeight{
+    padding: var(--standard-padding);
+  }
