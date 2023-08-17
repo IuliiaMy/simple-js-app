@@ -16,7 +16,12 @@ let pokemonRepository = (function(){
     }];
 
     function add(pokemon){
-        pokemonList.push(pokemon)
+        if(typeof pokemon === 'object'){
+            pokemonList.push(pokemon)
+        } else {
+            console.log('Bad data type')
+        }
+        
     }
 
     function getAll(){
@@ -38,3 +43,4 @@ pokemonRepository.getAll().forEach(function(pokemon){
     let result = pokemon.height >1.0 ? 'Wow that\'s big' : '' 
     document.write(`<div class=pokemonNameAndHeight>${pokemon.name} (height:${pokemon.height}) ${result}</div><br>`)
 });
+
