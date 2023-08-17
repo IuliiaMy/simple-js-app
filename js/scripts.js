@@ -28,9 +28,15 @@ let pokemonRepository = (function(){
         return pokemonList
     }
 
+    function filter(pokemon){
+        pokemonList.filter(pokemon)
+        return pokemon.name === 'Persian'
+    }
+
     return{
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        filter:filter
     };
 
 
@@ -44,3 +50,4 @@ pokemonRepository.getAll().forEach(function(pokemon){
     document.write(`<div class=pokemonNameAndHeight>${pokemon.name} (height:${pokemon.height}) ${result}</div><br>`)
 });
 
+console.log(pokemonRepository.filter());
